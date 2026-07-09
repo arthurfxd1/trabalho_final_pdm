@@ -1,7 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!-- a interface foi removida -->
-</FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADICIONAR NOVA TAREFA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/et_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="O QUE FAZER?"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ONDE? (EX: AVENIDA PAULISTA, 1000)"
+            android:inputType="textPostalAddress"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/bt_salvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SALVAR E ATIVAR GPS"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/bt_painel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VER PAINEL WEB"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/bt_teste_notif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TESTAR NOTIFICAÇÃO AGORA"
+            android:backgroundTint="#FF9800"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/bt_limpar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LIMPAR TODAS AS TAREFAS"
+            android:backgroundTint="#F44336"
+            android:layout_marginTop="8dp" />
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>
